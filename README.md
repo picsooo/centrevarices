@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Centre des Varices — Site web
 
-## Getting Started
+Site vitrine du **Centre des Varices** (Dr Ziane epse Aniat) à Dely Ibrahim, Alger.
 
-First, run the development server:
+## Stack
+
+- Next.js 15 (App Router) + TypeScript
+- Tailwind CSS + shadcn/ui
+- Framer Motion
+- Resend (emails RDV)
+- Déploiement : PM2 + Nginx sur VPS
+
+## Installation
 
 ```bash
+npm install
+cp .env.example .env.local
+# Renseigner RESEND_API_KEY et CABINET_EMAIL dans .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contenu à modifier
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Tout le contenu éditable est dans **`src/content/site.ts`** :
+- Coordonnées, horaires, adresse
+- Textes (bio médecin, pathologies, examens)
+- Photos (URLs Unsplash par défaut, à remplacer)
+- Mode de réservation (`bookingMode`)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Remplacement des photos
 
-## Learn More
+1. Placer les vraies photos dans `public/photos/`
+2. Mettre à jour les chemins dans `src/content/site.ts` (section `photos`)
+3. Chaque photo placeholder est marquée `// À REMPLACER par photo réelle`
 
-To learn more about Next.js, take a look at the following resources:
+### Textes marqués TODO_CLIENT
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Chercher `TODO_CLIENT` dans `src/content/site.ts` pour trouver les textes à compléter :
+- Bio du médecin (`doctorBio` / `doctorBioAr`)
+- Email de contact
+- URL Google Maps exacte
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Variables d'environnement
 
-## Deploy on Vercel
+| Variable | Description |
+|---|---|
+| `RESEND_API_KEY` | Clé API Resend pour l'envoi d'emails |
+| `CABINET_EMAIL` | Adresse email du cabinet (destinataire RDV) |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Déploiement (VPS Hostarts)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Build
+
+```bash
+npm run build
+```
+
+### PM2
+
+```bash
+# Copier .next/standalone sur le serveur
+pm2 start ecosystem.config.js
+pm2 save
+```
+
+### Nginx
+
+Copier `nginx.example.conf` dans `/etc/nginx/sites-available/centredesvarices.dz` et adapter.
+
+```bash
+# SSL Let's Encrypt
+sudo certbot --nginx -d centredesvarices.dz -d www.centredesvarices.dz
+```
+
+## V2 (TODO)
+
+- [ ] Switch FR/AR complet (next-intl)
+- [ ] Agenda réel avec créneaux bloqués (Google Calendar / Cal.com)
