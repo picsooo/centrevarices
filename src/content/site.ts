@@ -164,8 +164,8 @@ export const siteConfig = {
       alt: "Cabinet médical moderne et lumineux", // À REMPLACER par photo réelle
     },
     doctor: {
-      src: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=600&h=750&fit=crop&crop=face",
-      alt: "Dr Ziane epse Aniat", // À REMPLACER par photo réelle
+      src: "/photos/doctor.png",
+      alt: "Dr Ziane epse Aniat",
     },
     gallery: [
       {
