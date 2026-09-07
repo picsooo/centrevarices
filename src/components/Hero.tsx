@@ -1,25 +1,47 @@
 "use client";
 
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Phone, MapPin, Clock, Stethoscope } from "lucide-react";
 import { siteConfig } from "@/content/site";
 
 export default function Hero() {
+  const slides = siteConfig.photos.heroSlides;
+  const [current, setCurrent] = useState(0);
+
+  const next = useCallback(() => {
+    setCurrent((prev) => (prev + 1) % slides.length);
+  }, [slides.length]);
+
+  useEffect(() => {
+    const timer = setInterval(next, 5000);
+    return () => clearInterval(timer);
+  }, [next]);
+
   return (
-    <section className="relative overflow-hidden bg-brand-900">
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <Image
-          src={siteConfig.photos.hero.src}
-          alt={siteConfig.photos.hero.alt}
-          fill
-          className="object-cover opacity-30"
-          priority
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-900/95 via-brand-900/80 to-brand-900/60" />
-      </div>
+    <section className="relative overflow-hidden bg-brand-900 min-h-[600px] sm:min-h-[700px]">
+      {/* Slideshow background */}
+      <AnimatePresence mode="popLayout">
+        <motion.div
+          key={current}
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.2, ease: "easeInOut" }}
+          className="absolute inset-0"
+        >
+          <Image
+            src={slides[current].src}
+            alt={slides[current].alt}
+            fill
+            className="object-cover"
+            priority={current === 0}
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-900/90 via-brand-900/70 to-brand-900/50" />
+        </motion.div>
+      </AnimatePresence>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36">
         <div className="max-w-2xl">
@@ -74,18 +96,9 @@ export default function Hero() {
             className="mt-12 flex flex-col sm:flex-row gap-6"
           >
             {[
-              {
-                icon: Stethoscope,
-                text: "Examens sur place",
-              },
-              {
-                icon: MapPin,
-                text: "À côté du CNMS",
-              },
-              {
-                icon: Clock,
-                text: "Réponse dans la journée",
-              },
+              { icon: Stethoscope, text: "Examens sur place" },
+              { icon: MapPin, text: "À côté du CNMS" },
+              { icon: Clock, text: "Réponse dans la journée" },
             ].map((item) => (
               <div
                 key={item.text}
@@ -98,6 +111,22 @@ export default function Hero() {
               </div>
             ))}
           </motion.div>
+        </div>
+
+        {/* Slide indicators */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
+          {slides.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`h-2 rounded-full transition-all duration-300 ${
+                i === current
+                  ? "w-8 bg-white"
+                  : "w-2 bg-white/40 hover:bg-white/60"
+              }`}
+              aria-label={`Slide ${i + 1}`}
+            />
+          ))}
         </div>
       </div>
     </section>

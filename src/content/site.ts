@@ -159,10 +159,24 @@ export const siteConfig = {
 
   // Photos — À REMPLACER par les photos réelles du cabinet
   photos: {
-    hero: {
-      src: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=1400&h=800&fit=crop&crop=center",
-      alt: "Cabinet médical moderne et lumineux", // À REMPLACER par photo réelle
-    },
+    heroSlides: [
+      {
+        src: "https://images.unsplash.com/photo-1551076805-e1869033e561?w=1600&h=900&fit=crop",
+        alt: "Médecin réalisant un examen vasculaire", // À REMPLACER par photo réelle
+      },
+      {
+        src: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1600&h=900&fit=crop",
+        alt: "Échographie doppler en cabinet", // À REMPLACER par photo réelle
+      },
+      {
+        src: "https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=1600&h=900&fit=crop",
+        alt: "Consultation médicale moderne", // À REMPLACER par photo réelle
+      },
+      {
+        src: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1600&h=900&fit=crop",
+        alt: "Cabinet médical lumineux et accueillant", // À REMPLACER par photo réelle
+      },
+    ],
     doctor: {
       src: "/photos/doctor.png",
       alt: "Dr Ziane epse Aniat",
@@ -173,20 +187,20 @@ export const siteConfig = {
         alt: "Salle de consultation", // À REMPLACER par photo réelle
       },
       {
-        src: "https://images.unsplash.com/photo-1583912267550-d6c2ac3196c0?w=800&h=600&fit=crop",
-        alt: "Échographe doppler", // À REMPLACER par photo réelle
+        src: "https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&h=600&fit=crop",
+        alt: "Examen vasculaire", // À REMPLACER par photo réelle
       },
       {
-        src: "https://images.unsplash.com/photo-1631217872822-d73e67b13d93?w=800&h=600&fit=crop",
+        src: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=600&fit=crop",
         alt: "Salle d'attente lumineuse", // À REMPLACER par photo réelle
       },
       {
-        src: "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&h=600&fit=crop",
+        src: "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=800&h=600&fit=crop",
         alt: "Accueil du cabinet", // À REMPLACER par photo réelle
       },
       {
-        src: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=600&fit=crop",
-        alt: "Espace d'attente confortable", // À REMPLACER par photo réelle
+        src: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&h=600&fit=crop",
+        alt: "Équipement médical moderne", // À REMPLACER par photo réelle
       },
     ],
     ambiance: {
