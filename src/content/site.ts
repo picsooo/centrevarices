@@ -161,20 +161,20 @@ export const siteConfig = {
   photos: {
     heroSlides: [
       {
-        src: "https://images.unsplash.com/photo-1551076805-e1869033e561?w=1600&h=900&fit=crop",
-        alt: "Médecin réalisant un examen vasculaire", // À REMPLACER par photo réelle
+        src: "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=1600&h=900&fit=crop",
+        alt: "Appareil d'échographie médicale", // À REMPLACER par photo réelle
       },
       {
-        src: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1600&h=900&fit=crop",
-        alt: "Échographie doppler en cabinet", // À REMPLACER par photo réelle
+        src: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=1600&h=900&fit=crop",
+        alt: "Moniteur ECG et équipement cardiaque", // À REMPLACER par photo réelle
       },
       {
-        src: "https://images.unsplash.com/photo-1666214280557-f1b5022eb634?w=1600&h=900&fit=crop",
-        alt: "Consultation médicale moderne", // À REMPLACER par photo réelle
+        src: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=1600&h=900&fit=crop",
+        alt: "Stéthoscope et instruments médicaux", // À REMPLACER par photo réelle
       },
       {
-        src: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=1600&h=900&fit=crop",
-        alt: "Cabinet médical lumineux et accueillant", // À REMPLACER par photo réelle
+        src: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=1600&h=900&fit=crop",
+        alt: "Couloir de clinique moderne", // À REMPLACER par photo réelle
       },
     ],
     doctor: {
@@ -187,20 +187,20 @@ export const siteConfig = {
         alt: "Salle de consultation", // À REMPLACER par photo réelle
       },
       {
-        src: "https://images.unsplash.com/photo-1551076805-e1869033e561?w=800&h=600&fit=crop",
-        alt: "Examen vasculaire", // À REMPLACER par photo réelle
+        src: "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&h=600&fit=crop",
+        alt: "Appareil d'échographie", // À REMPLACER par photo réelle
       },
       {
-        src: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=600&fit=crop",
-        alt: "Salle d'attente lumineuse", // À REMPLACER par photo réelle
+        src: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&h=600&fit=crop",
+        alt: "Intérieur de clinique moderne", // À REMPLACER par photo réelle
       },
       {
-        src: "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=800&h=600&fit=crop",
-        alt: "Accueil du cabinet", // À REMPLACER par photo réelle
+        src: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=800&h=600&fit=crop",
+        alt: "Moniteur et équipement cardiaque", // À REMPLACER par photo réelle
       },
       {
-        src: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=800&h=600&fit=crop",
-        alt: "Équipement médical moderne", // À REMPLACER par photo réelle
+        src: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=800&h=600&fit=crop",
+        alt: "Instruments médicaux", // À REMPLACER par photo réelle
       },
     ],
     ambiance: {
