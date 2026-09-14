@@ -178,8 +178,8 @@ export const siteConfig = {
       },
     ],
     doctor: {
-      src: "/photos/doctor.png",
-      alt: "Dr Ziane epse Aniat",
+      src: "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=800&h=1000&fit=crop",
+      alt: "Appareil d'échographie Doppler vasculaire", // À REMPLACER par photo réelle
     },
     gallery: [
       {
