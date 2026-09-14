@@ -178,8 +178,8 @@ export const siteConfig = {
       },
     ],
     doctor: {
-      src: "https://images.unsplash.com/photo-1581595220892-b0739db3ba8c?w=800&h=1000&fit=crop",
-      alt: "Appareil d'échographie Doppler vasculaire", // À REMPLACER par photo réelle
+      src: "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&h=1000&fit=crop",
+      alt: "Appareil d'échographie médicale", // À REMPLACER par photo réelle
     },
     gallery: [
       {
