@@ -61,6 +61,24 @@ h2{font-family:Fr;font-weight:400;font-size:clamp(34px,5vw,54px);line-height:1.0
 .thumbs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:26px;max-width:460px}
 .thumbs button{border:0;padding:0;border-radius:14px;overflow:hidden;cursor:pointer;outline:3px solid transparent;outline-offset:2px;aspect-ratio:4/5;background:#ddd}
 .thumbs button.on{outline-color:var(--g3)}.thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:40px}
+@media(max-width:980px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.grid{grid-template-columns:minmax(0,1fr);gap:22px}}
+.pc{background:#fff;border:1px solid #e6ece9;border-radius:22px;overflow:hidden;box-shadow:0 24px 50px -28px rgba(15,46,38,.45);transition:transform .25s,box-shadow .25s}
+.pc:hover{transform:translateY(-4px);box-shadow:0 30px 60px -26px rgba(15,46,38,.55)}
+.pc .ph3{display:flex;align-items:center;gap:10px;padding:12px 14px}.pc .ph3 .av{width:36px;height:36px;border-radius:50%;background:var(--l2);display:flex;align-items:center;justify-content:center;flex:none}.pc .ph3 .av img{width:24px}
+.pc .ph3 b{font-size:13.5px;display:block}.pc .ph3 small{font-size:11.5px;color:#777}.pc .ph3 .dots{margin-left:auto;color:#999}
+.pc .im{display:block;width:100%;border:0;padding:0;background:#eee;cursor:zoom-in;aspect-ratio:4/5}.pc .im img{width:100%;height:100%;object-fit:cover;display:block}
+.pc .ac{display:flex;gap:16px;padding:10px 14px 4px;font-size:19px}.pc .ac span:last-child{margin-left:auto}
+.pc .tx{padding:4px 14px 16px;font-size:13px;line-height:1.5;color:#222}.pc .tx .hs{color:#00376b}.pc .tx b{margin-right:4px}
+.pc .fa{display:flex;justify-content:space-around;border-top:1px solid #eee;padding:10px 0;font-size:12.5px;color:#555;font-weight:700}
+.pc .tt{padding:14px 14px 0;font-family:Fr;font-size:20px}
+.lb{position:fixed;inset:0;background:rgba(10,24,20,.92);z-index:50;display:none;align-items:center;justify-content:center;padding:20px}
+.lb.on{display:flex}.lb img{max-width:min(92vw,620px);max-height:82vh;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lb .x{position:absolute;top:18px;right:18px;width:46px;height:46px;border-radius:50%;border:0;background:#F4F9F6;font-size:18px;cursor:pointer}
+.lb .nv{position:absolute;top:50%;transform:translateY(-50%);width:50px;height:50px;border-radius:50%;border:0;background:rgba(244,249,246,.9);font-size:28px;cursor:pointer}
+.lb .pv{left:14px}.lb .nx{right:14px}
+.lb .lc{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#BBEAD8;font-family:Fr;font-size:20px}
 .strat{background:var(--d);color:var(--l3)}
 .strat .k{color:var(--l1)}.strat h2 i{color:var(--l1)}.strat .sub{color:#BBEAD8}
 .cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:40px}
@@ -72,13 +90,13 @@ h2{font-family:Fr;font-weight:400;font-size:clamp(34px,5vw,54px);line-height:1.0
 footer{padding:34px 0;font-size:13px;color:#4c6a61;border-top:1px solid var(--l2)}footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 </style></head><body>
 <nav><div class="w"><a class="br" href="/"><img src="logo.svg" alt=""><span><b>Centre des Varices</b><span>مركز الدوالي</span></span></a>
-<div class="lk"><a href="#videos">Vidéos</a><a href="#posts">Publications</a><a href="#strategie">Stratégie</a></div>
+<div class="lk"><a href="#videos">Vidéos</a><a href="#posts">Maquettes</a><a href="#strategie">Stratégie</a></div>
 <a class="btn b3" href="strategie-centre-des-varices.pdf" download style="padding:10px 18px;font-size:13px">Stratégie PDF</a></div></nav>
 <header class="hero"><div class="w">
  <div class="k">Réseaux sociaux · Proposition</div>
  <h1>Le cabinet,<br><i>sur les réseaux.</i></h1>
  <p class="lead">Vidéos explicatives et publications pour Facebook, Instagram et TikTok, aux couleurs du Centre des Varices. Tout le contenu reprend les informations du site et sera validé par la doctoresse avant publication.</p>
- <div style="display:flex;gap:12px;margin-top:30px;flex-wrap:wrap"><a class="btn b1" href="#videos">▶ Voir les vidéos</a><a class="btn b2" href="#strategie">La stratégie de lancement</a></div>
+ <div style="display:flex;gap:12px;margin-top:30px;flex-wrap:wrap"><a class="btn b1" href="#videos">▶ Voir les vidéos</a><a class="btn b2" href="#posts">Voir les maquettes</a><a class="btn b2" href="#strategie">La stratégie</a></div>
 </div>
 <svg class="ecg" viewBox="0 0 1200 90" preserveAspectRatio="none"><path d="M0 60 H200 l15 -10 l15 10 H300 l10 -20 l14 60 l16 -90 l12 50 H520 c15 0 25 -20 40 -20 s25 20 40 20 H800 l15 -10 l15 10 H900 l10 -20 l14 60 l16 -90 l12 50 H1200" fill="none" stroke="#6DC4AA" stroke-width="2"/></svg>
 </header>
@@ -90,13 +108,13 @@ footer{padding:34px 0;font-size:13px;color:#4c6a61;border-top:1px solid var(--l2
  <div class="vids" id="vids"></div>
 </div></section>
 <section id="posts" style="background:#fff"><div class="w">
- <div class="k">Publications · Instagram &amp; Facebook</div>
- <h2>Des visuels <i>clairs et sobres</i></h2>
- <p class="sub">Un message par publication, l'identité du cabinet, le numéro WhatsApp. Cliquez sur un visuel pour le voir dans le fil.</p>
+ <div class="k">Maquettes · Instagram &amp; Facebook</div>
+ <h2>Six publications <i>prêtes à poster</i></h2>
+ <p class="sub">Un message par publication, l'identité du cabinet, le numéro WhatsApp. Touchez une maquette pour l'agrandir.</p>
  <div class="tabs" id="ptabs"><button class="on" data-p="ig">Instagram</button><button data-p="fb">Facebook</button></div>
- <div class="feed"><div class="ph2"><div class="scr" id="feed"></div></div>
-  <div class="side2"><h3 id="pt"></h3><p id="pd"></p><div class="thumbs" id="thumbs"></div></div></div>
+ <div class="grid" id="grid"></div>
 </div></section>
+<div id="lb" class="lb"><button class="x" aria-label="Fermer">✕</button><button class="nv pv" aria-label="Précédent">‹</button><img alt=""><button class="nv nx" aria-label="Suivant">›</button><div class="lc"></div></div>
 <section id="strategie" class="strat"><div class="w">
  <div class="k">Stratégie de lancement</div>
  <h2>Un plan clair, <i>mois après mois</i></h2>
@@ -117,10 +135,11 @@ const UI={tt:(t,c)=>`<div class="top">Suivis &nbsp; <b>Pour toi</b></div><div cl
 ig:(t,c)=>`<div class="top">Reels</div><div class="side"><span><i>♡</i></span><span><i>💬</i></span><span><i>➤</i></span></div><div class="cap"><b>${H} · Suivre</b></div>`,
 fb:(t,c)=>`<div class="top">Reels Facebook</div><div class="side"><span><i>👍</i>J'aime</span><span><i>💬</i></span><span><i>↗</i>Partager</span></div><div class="cap"><b>Centre des Varices · Suivre</b></div>`};
 let plat='tt';const vids=document.getElementById('vids');
-function drawV(){vids.innerHTML=V.map(([f,t,c],i)=>`<div><div class="ph"><div class="scr"><video src="${f}.mp4" poster="${f}.jpg" muted loop playsinline preload="metadata"></video><div class="ui">${UI[plat](t,c)}</div><button class="snd" data-i="${i}">🔊 Activer le son</button></div></div><div class="vt">${t}<span>${['26 s','29 s','32 s','40 s'][i]}</span></div></div>`).join('');
+function drawV(){vids.innerHTML=V.map(([f,t,c],i)=>`<div><div class="ph"><div class="scr"><video poster="${f}.jpg" muted autoplay loop playsinline webkit-playsinline preload="auto" disablepictureinpicture><source src="${f}.mp4?v=2" type="video/mp4"></video><div class="ui">${UI[plat](t,c)}</div><button class="snd" data-i="${i}">🔊 Activer le son</button></div></div><div class="vt">${t}<span>${['26 s','29 s','32 s','40 s'][i]}</span></div></div>`).join('');
  const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting)v.play().catch(()=>{});else v.pause()}),{threshold:.5});
  vids.querySelectorAll('video').forEach(v=>io.observe(v));
- vids.querySelectorAll('.snd').forEach(b=>b.onclick=()=>{vids.querySelectorAll('video').forEach(o=>o.muted=true);vids.querySelectorAll('.snd').forEach(o=>o.style.display='');const v=b.parentNode.querySelector('video');v.muted=false;v.currentTime=0;v.play();b.style.display='none'});}
+ vids.querySelectorAll('video').forEach(v=>{v.muted=true;v.defaultMuted=true;v.setAttribute('muted','');v.parentNode.onclick=e=>{if(e.target.closest('.snd'))return;v.paused?v.play().catch(()=>{}):v.pause()}});
+ vids.querySelectorAll('.snd').forEach(b=>b.onclick=()=>{vids.querySelectorAll('video').forEach(o=>o.muted=true);vids.querySelectorAll('.snd').forEach(o=>o.style.display='');const v=b.parentNode.querySelector('video');v.muted=false;v.currentTime=0;v.play().catch(()=>{});b.style.display='none'});}
 document.querySelectorAll('#vtabs button').forEach(b=>b.onclick=()=>{plat=b.dataset.p;document.querySelectorAll('#vtabs button').forEach(x=>x.classList.toggle('on',x===b));drawV()});drawV();
 const P=[['Des jambes légères','Le visuel d\'appel : varices et jambes lourdes, examen et écho-doppler sur place.','Jambes lourdes, gonflées en fin de journée ? Un examen clinique et un écho-doppler réalisés sur place permettent un diagnostic précis. 📍 Dely Ibrahim, à côté du CNMS · 📲 RDV WhatsApp 0560 76 43 16','#varices #echodoppler #DelyIbrahim #Alger'],
 ['Écho-doppler vasculaire','L\'examen phare du cabinet, expliqué simplement.','L\'écho-doppler vasculaire : un examen indolore, sans aiguille, pour voir vos artères, vos veines et la circulation du sang en temps réel. Réalisé sur place, au cabinet.','#echodoppler #varices #DelyIbrahim'],
@@ -128,16 +147,18 @@ const P=[['Des jambes légères','Le visuel d\'appel : varices et jambes lourdes
 ['Le cabinet','Un cabinet neuf, calme et lumineux.','Un espace neuf, calme et lumineux, pensé pour votre confort et équipé pour des examens complets sur place. 📍 Dely Ibrahim, à côté du CNMS.','#DelyIbrahim #Alger #cabinetmedical'],
 ['Médecine interne','Les pathologies prises en charge, en français et en arabe.','Maladies vasculaires, varices, ulcère de jambe veineux, maladies auto-immunes, diabète, hypertension, thyroïde : un suivi complet en médecine interne. مركز الدوالي','#medecineinterne #diabete #hypertension'],
 ['Infos pratiques','Adresse, horaires et WhatsApp, avec le repère du cabinet.','28 rue Mohamed Bettouche Ali, Clair Val, Dely Ibrahim (à côté du CNMS). Samedi – jeudi, 08h30 – 16h30. Rendez-vous par WhatsApp : 0560 76 43 16.','#DelyIbrahim #Alger #varices']];
-let pn='ig',pi=0;const feed=document.getElementById('feed');
-function drawP(){const p=P[pi],ig=pn==='ig';
- feed.innerHTML=(ig?'<div class="app"><span class="lg">Instagram</span><span>♡ &nbsp;✉</span></div>':'<div class="app fb"><span class="lg">facebook</span><span>🔍 &nbsp;✉</span></div>')+
- `<div class="pp"><div class="av"><img src="logo.svg" alt=""></div><div><b>${ig?H:'Centre des Varices · مركز الدوالي'}</b><small>${ig?'Dely Ibrahim, Alger':'Sponsorisé · 🌐'}</small></div></div>`+
- (ig?'':`<div class="capt">${p[2]} <span class="hs">${p[3]}</span></div>`)+
- `<div class="pimg"><img src="post${pi+1}.jpg" alt="${p[0]}"></div>`+
- (ig?`<div class="acts">♡ 💬 ➤<span style="margin-left:auto">🔖</span></div><div class="likes">J'aime</div><div class="capt"><b>${H}</b> ${p[2]} <span class="hs">${p[3]}</span></div>`:`<div class="fbacts"><span>👍 J'aime</span><span>💬 Commenter</span><span>📲 WhatsApp</span></div>`);
- document.getElementById('pt').textContent=p[0];document.getElementById('pd').textContent=p[1];
- document.querySelectorAll('#thumbs button').forEach((b,k)=>b.classList.toggle('on',k===pi));}
-document.getElementById('thumbs').innerHTML=P.map((p,i)=>`<button aria-label="${p[0]}"><img src="post${i+1}t.jpg" alt=""></button>`).join('');
-document.querySelectorAll('#thumbs button').forEach((b,i)=>b.onclick=()=>{pi=i;drawP()});
-document.querySelectorAll('#ptabs button').forEach(b=>b.onclick=()=>{pn=b.dataset.p;document.querySelectorAll('#ptabs button').forEach(x=>x.classList.toggle('on',x===b));drawP()});drawP();
+let pn='ig';const grid=document.getElementById('grid');
+function drawP(){const ig=pn==='ig';grid.innerHTML=P.map((p,i)=>`<article class="pc">
+ <div class="ph3"><div class="av"><img src="logo.svg" alt=""></div><div><b>${ig?H:'Centre des Varices · مركز الدوالي'}</b><small>${ig?'Dely Ibrahim, Alger':'Sponsorisé · 🌐'}</small></div><span class="dots">···</span></div>
+ ${ig?'':`<div class="tx" style="padding-top:0">${p[2]} <span class="hs">${p[3]}</span></div>`}
+ <button class="im" data-i="${i}"><img src="post${i+1}.jpg" alt="${p[0]}"></button>
+ ${ig?`<div class="ac"><span>♡</span><span>💬</span><span>➤</span><span>🔖</span></div><div class="tx"><b>${H}</b>${p[2]} <span class="hs">${p[3]}</span></div>`:`<div class="fa"><span>👍 J'aime</span><span>💬 Commenter</span><span>📲 WhatsApp</span></div>`}
+</article>`).join('');grid.querySelectorAll('.im').forEach(b=>b.onclick=()=>openLb(+b.dataset.i));}
+document.querySelectorAll('#ptabs button').forEach(b=>b.onclick=()=>{pn=b.dataset.p;document.querySelectorAll('#ptabs button').forEach(x=>x.classList.toggle('on',x===b));drawP()});
+const lb=document.getElementById('lb');let li=0;
+function openLb(i){li=(i+P.length)%P.length;lb.querySelector('img').src=`post${li+1}.jpg`;lb.querySelector('.lc').textContent=P[li][0];lb.classList.add('on')}
+lb.querySelector('.x').onclick=()=>lb.classList.remove('on');lb.onclick=e=>{if(e.target===lb)lb.classList.remove('on')};
+lb.querySelector('.pv').onclick=()=>openLb(li-1);lb.querySelector('.nx').onclick=()=>openLb(li+1);
+document.addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowLeft')openLb(li-1);if(e.key==='ArrowRight')openLb(li+1)});
+drawP();
 </script></body></html>
