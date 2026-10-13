@@ -97,16 +97,24 @@ h2{font-family:Fr;font-weight:400;font-size:clamp(34px,5vw,54px);line-height:1.0
 .card .n{font-family:Fr;font-size:44px;color:var(--l1);line-height:1}.card b{display:block;font-size:16px;margin-top:12px}.card p{font-size:14px;color:#BBEAD8;margin-top:6px;line-height:1.5}
 .dl{display:flex;align-items:center;gap:22px;margin-top:40px;flex-wrap:wrap}
 footer{padding:34px 0;font-size:13px;color:#4c6a61;border-top:1px solid var(--l2)}footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.hgrid{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hv{position:relative}.hv .ph{max-width:320px}
+.hv .tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);z-index:6;background:var(--l1);color:var(--d);font-weight:800;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:7px 14px;border-radius:99px;white-space:nowrap}
+.hv .snd2{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);z-index:6;border:0;border-radius:99px;padding:10px 18px;font:700 14px/1 inherit;font-family:inherit;background:rgba(244,249,246,.92);color:#0F2E26;cursor:pointer;white-space:nowrap}
+.hv{padding-bottom:70px}.hv .vt{text-align:center;margin-top:14px;color:var(--l1);font-weight:700;font-size:15px}
+@media(max-width:860px){.hgrid{grid-template-columns:1fr;gap:44px}}
 </style></head><body>
 <nav><div class="w"><a class="br" href="/"><img src="logo.svg" alt=""><span><b>Centre des Varices</b><span>مركز الدوالي</span></span></a>
 <div class="lk"><a href="#videos">Vidéos</a><a href="#posts">Maquettes</a><a href="#strategie">Stratégie</a></div>
 <a class="btn b3" href="strategie-centre-des-varices.pdf" download style="padding:10px 18px;font-size:13px">Stratégie PDF</a></div></nav>
-<header class="hero"><div class="w">
+<header class="hero"><div class="w"><div class="hgrid"><div>
  <div class="k">Réseaux sociaux · Proposition</div>
  <h1>Le cabinet,<br><i>sur les réseaux.</i></h1>
  <p class="lead">Vidéos explicatives et publications pour Facebook, Instagram et TikTok, aux couleurs du Centre des Varices. Tout le contenu reprend les informations du site et sera validé par la doctoresse avant publication.</p>
  <div style="display:flex;gap:12px;margin-top:30px;flex-wrap:wrap"><a class="btn b1" href="#" data-msg>💌 Voir le message de Walid</a><a class="btn b2" href="#videos">▶ Les vidéos</a><a class="btn b2" href="#posts">Voir les maquettes</a><a class="btn b2" href="#strategie">La stratégie</a></div>
 </div>
+ <div class="hv"><span class="tag">Nouveau · Vidéo de présentation</span><div class="ph"><div class="scr"><video id="pv" poster="presentation.jpg" muted autoplay loop playsinline webkit-playsinline preload="auto" disablepictureinpicture><source src="presentation.mp4?v=1" type="video/mp4"></video><button class="snd2" id="pvs">🔊 Regarder avec le son</button></div></div><div class="vt">Présentation du cabinet · 1 min 27</div></div>
+</div></div>
 <svg class="ecg" viewBox="0 0 1200 90" preserveAspectRatio="none"><path d="M0 60 H200 l15 -10 l15 10 H300 l10 -20 l14 60 l16 -90 l12 50 H520 c15 0 25 -20 40 -20 s25 20 40 20 H800 l15 -10 l15 10 H900 l10 -20 l14 60 l16 -90 l12 50 H1200" fill="none" stroke="#6DC4AA" stroke-width="2"/></svg>
 </header>
 <section id="videos"><div class="w">
@@ -183,4 +191,9 @@ document.querySelectorAll('[data-msg]').forEach(b=>b.onclick=e=>{e.preventDefaul
 let seen=false;try{seen=sessionStorage.getItem('msgW')==='1';sessionStorage.setItem('msgW','1')}catch(e){}
 if(!seen)setTimeout(open,900);})();
 </script>
+<script>(function(){const v=document.getElementById('pv'),b=document.getElementById('pvs');
+b.onclick=e=>{e.stopPropagation();v.muted=false;v.currentTime=0;v.loop=false;v.play();b.style.display='none'};
+v.onclick=()=>{if(v.muted){b.click()}else if(v.paused){v.play()}else{v.pause()}};
+v.onended=()=>{v.muted=true;v.loop=true;v.play();b.style.display=''};
+const p=v.play();if(p)p.catch(()=>{});})();</script>
 </body></html>
