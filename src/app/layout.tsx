@@ -66,6 +66,12 @@ export default function RootLayout({
                 addressRegion: "Alger",
                 addressCountry: "DZ",
               },
+              geo: {
+                "@type": "GeoCoordinates",
+                latitude: siteConfig.geo.lat,
+                longitude: siteConfig.geo.lng,
+              },
+              hasMap: siteConfig.mapLink,
               telephone: siteConfig.phoneHref,
               openingHoursSpecification: [
                 {

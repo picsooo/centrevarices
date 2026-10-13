@@ -34,8 +34,11 @@ export const siteConfig = {
   },
 
   // Google Maps
+  // Position exacte du cabinet (Plus Code Q292+J85)
+  geo: { lat: 36.769013, lng: 3.000859 },
   mapEmbedUrl:
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3197.5!2d2.98!3d36.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sDely+Ibrahim!5e0!3m2!1sfr!2sdz!4v1700000000000", // TODO_CLIENT: remplacer par l'URL exacte Google Maps
+    "https://maps.google.com/maps?q=36.769013,3.000859&z=17&hl=fr&output=embed",
+  mapLink: "https://www.google.com/maps/search/?api=1&query=36.769013%2C3.000859",
 
   // Mode de réservation : 'whatsapp' | 'email' | 'both'
   bookingMode: "both" as "whatsapp" | "email" | "both",

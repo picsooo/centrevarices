@@ -40,6 +40,15 @@ export default function Access() {
                   <Navigation className="w-3.5 h-3.5" />
                   {siteConfig.landmark}
                 </p>
+                <a
+                  href={siteConfig.mapLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-flex items-center gap-2 rounded-full bg-brand-700 px-4 py-2 text-sm font-semibold text-white hover:bg-brand-800 transition-colors"
+                >
+                  <Navigation className="w-4 h-4" />
+                  Itinéraire Google Maps
+                </a>
               </div>
             </div>
 
