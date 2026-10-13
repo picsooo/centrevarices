@@ -88,6 +88,13 @@ export default function Footer() {
             >
               {siteConfig.credit.name}
             </a>
+            {" · "}
+            <a
+              href="/reseaux/index.html"
+              className="text-brand-300 hover:text-white transition-colors"
+            >
+              Réseaux sociaux
+            </a>
           </p>
         </div>
       </div>

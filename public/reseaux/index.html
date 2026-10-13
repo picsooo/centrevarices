@@ -1,0 +1,143 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Centre des Varices — Réseaux sociaux</title><meta name="robots" content="noindex,nofollow"><link rel="icon" href="logo.svg">
+<style>
+@font-face{font-family:Fr;src:url(fraunces-latin-400-normal.woff2)}@font-face{font-family:Fr;src:url(fraunces-latin-400-italic.woff2);font-style:italic}
+@font-face{font-family:Mn;src:url(manrope-latin-500-normal.woff2);font-weight:500}@font-face{font-family:Mn;src:url(manrope-latin-600-normal.woff2);font-weight:600}@font-face{font-family:Mn;src:url(manrope-latin-700-normal.woff2);font-weight:700}@font-face{font-family:Mn;src:url(manrope-latin-800-normal.woff2);font-weight:800}
+@font-face{font-family:Tj;src:url(tajawal-arabic-700-normal.woff2)}
+:root{--d:#0F2E26;--g1:#1E5A4C;--g3:#2F8A72;--l1:#9DD9C4;--l2:#DDEFE7;--l3:#F4F9F6;--t:#182622}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:Mn;color:var(--t);background:var(--l3);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.w{max-width:1180px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:20;background:rgba(244,249,246,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--l2)}
+nav .w{display:flex;align-items:center;justify-content:space-between;height:68px}
+.br{display:flex;align-items:center;gap:12px;text-decoration:none}.br img{width:38px}.br b{font-family:Fr;font-weight:400;font-size:19px;display:block}.br span{font-family:Tj;font-size:13px;color:var(--g3)}
+nav .lk{display:flex;gap:22px;font-weight:600;font-size:14px}nav .lk a{text-decoration:none;opacity:.75}nav .lk a:hover{opacity:1}
+@media(max-width:720px){nav .lk{display:none}}
+.hero{background:var(--d);color:var(--l3);padding:90px 0 80px;position:relative;overflow:hidden}
+.k{font-weight:800;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--g3)}
+.hero .k{color:var(--l1)}
+h1{font-family:Fr;font-weight:400;font-size:clamp(44px,7vw,84px);line-height:1.02;letter-spacing:-.025em;margin-top:18px}
+h1 i,h2 i{font-style:italic;color:var(--g3)}.hero h1 i{color:var(--l1)}
+.lead{font-size:18px;line-height:1.6;max-width:640px;margin-top:22px;color:#BBEAD8}
+.hero svg.ecg{position:absolute;left:0;right:0;bottom:24px;width:100%;height:90px;opacity:.5}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;border:0;cursor:pointer}
+.b1{background:var(--l3);color:var(--d)}.b2{background:rgba(157,217,196,.14);color:var(--l1)}.b3{background:var(--g1);color:#fff}
+section{padding:90px 0}
+h2{font-family:Fr;font-weight:400;font-size:clamp(34px,5vw,54px);line-height:1.05;letter-spacing:-.02em;margin-top:12px}
+.sub{color:#4c6a61;font-size:17px;line-height:1.6;max-width:640px;margin-top:14px}
+.tabs{display:inline-flex;gap:6px;background:#fff;border:1px solid var(--l2);border-radius:999px;padding:6px;margin-top:30px}
+.tabs button{border:0;background:none;padding:10px 18px;border-radius:999px;font:700 14px Mn;color:#4c6a61;cursor:pointer}
+.tabs button.on{background:var(--d);color:#fff}
+.vids{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px;margin-top:40px}
+@media(max-width:980px){.vids{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.vids{grid-template-columns:minmax(0,1fr)}}
+.ph{position:relative;aspect-ratio:9/16.6;background:#0b0f0e;border-radius:38px;padding:10px;box-shadow:0 30px 60px -20px rgba(15,46,38,.45);max-width:300px;margin:0 auto;width:100%}
+.ph .scr{position:relative;width:100%;height:100%;border-radius:30px;overflow:hidden;background:#000}
+.ph .scr:before{content:"";position:absolute;top:7px;left:50%;transform:translateX(-50%);width:28%;height:14px;border-radius:12px;background:#000;z-index:5}
+.ph video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ui{position:absolute;inset:0;z-index:3;pointer-events:none;color:#fff;font-size:11px}
+.ui .top{display:none;position:absolute;top:36px;left:0;right:0;text-align:center;font-weight:700;font-size:12px;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.ui .side{position:absolute;right:6px;bottom:150px;display:flex;flex-direction:column;gap:14px;align-items:center;font-weight:700;font-size:10px;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.ui .side i{display:block;width:30px;height:30px;border-radius:50%;background:rgba(0,0,0,.28);backdrop-filter:blur(4px);margin-bottom:3px;display:flex;align-items:center;justify-content:center;font-style:normal;font-size:14px}
+.ui .cap{position:absolute;left:0;right:0;bottom:0;padding:8px 52px 10px 12px;background:rgba(0,0,0,.35);font-size:10.5px;line-height:1.35;text-shadow:0 1px 3px rgba(0,0,0,.7)}
+.ui .cap b{display:block;font-size:11.5px;margin-bottom:3px}
+.snd{position:absolute;z-index:6;left:50%;bottom:44%;transform:translateX(-50%);background:rgba(244,249,246,.95);color:var(--d);border:0;border-radius:999px;padding:9px 14px;font:800 12px Mn;cursor:pointer;white-space:nowrap}
+.vt{text-align:center;margin-top:16px;font-family:Fr;font-size:20px}.vt span{display:block;font-family:Mn;font-size:13px;color:#4c6a61;margin-top:2px}
+.feed{display:grid;grid-template-columns:340px 1fr;gap:60px;align-items:center;margin-top:44px}
+@media(max-width:860px){.feed{grid-template-columns:minmax(0,1fr)}}
+.ph2{aspect-ratio:9/19.2;background:#0b0f0e;border-radius:40px;padding:10px;box-shadow:0 30px 60px -20px rgba(15,46,38,.45);max-width:340px;margin:0 auto;width:100%}
+.ph2 .scr{width:100%;height:100%;border-radius:32px;overflow:hidden;background:#fff;display:flex;flex-direction:column;position:relative}
+.app{display:flex;justify-content:space-between;align-items:center;padding:40px 14px 10px;font-size:13px;border-bottom:1px solid #eee}
+.app .lg{font-weight:800;font-size:18px;font-family:Fr;font-style:italic}
+.app.fb .lg{font-family:Mn;font-style:normal;color:#1877F2;font-size:20px;letter-spacing:-.5px}
+.pp{display:flex;align-items:center;gap:9px;padding:10px 12px}.pp .av{width:32px;height:32px;border-radius:50%;background:var(--l2);display:flex;align-items:center;justify-content:center}.pp .av img{width:22px}
+.pp b{font-size:12.5px;display:block}.pp small{font-size:10.5px;color:#777}
+.pimg{width:100%;aspect-ratio:4/5;background:#eee;overflow:hidden}.pimg img{width:100%;height:100%;object-fit:cover;display:block}
+.acts{display:flex;gap:14px;padding:9px 12px 2px;font-size:17px}
+.likes{padding:2px 12px;font-size:11.5px;font-weight:700}
+.capt{padding:3px 12px 10px;font-size:11.5px;line-height:1.45;color:#222;overflow:hidden}.capt .hs{color:#00376b}
+.fbacts{display:flex;justify-content:space-around;border-top:1px solid #eee;padding:8px 0;font-size:11.5px;color:#555;font-weight:600}
+.side2 h3{font-family:Fr;font-weight:400;font-size:34px;line-height:1.1}.side2 p{color:#4c6a61;margin-top:10px;line-height:1.6}
+.thumbs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:26px;max-width:460px}
+.thumbs button{border:0;padding:0;border-radius:14px;overflow:hidden;cursor:pointer;outline:3px solid transparent;outline-offset:2px;aspect-ratio:4/5;background:#ddd}
+.thumbs button.on{outline-color:var(--g3)}.thumbs img{width:100%;height:100%;object-fit:cover;display:block}
+.strat{background:var(--d);color:var(--l3)}
+.strat .k{color:var(--l1)}.strat h2 i{color:var(--l1)}.strat .sub{color:#BBEAD8}
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:40px}
+@media(max-width:900px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.cards{grid-template-columns:minmax(0,1fr)}}
+.card{border:1px solid rgba(157,217,196,.25);border-radius:22px;padding:24px}
+.card .n{font-family:Fr;font-size:44px;color:var(--l1);line-height:1}.card b{display:block;font-size:16px;margin-top:12px}.card p{font-size:14px;color:#BBEAD8;margin-top:6px;line-height:1.5}
+.dl{display:flex;align-items:center;gap:22px;margin-top:40px;flex-wrap:wrap}
+footer{padding:34px 0;font-size:13px;color:#4c6a61;border-top:1px solid var(--l2)}footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+</style></head><body>
+<nav><div class="w"><a class="br" href="/"><img src="logo.svg" alt=""><span><b>Centre des Varices</b><span>مركز الدوالي</span></span></a>
+<div class="lk"><a href="#videos">Vidéos</a><a href="#posts">Publications</a><a href="#strategie">Stratégie</a></div>
+<a class="btn b3" href="strategie-centre-des-varices.pdf" download style="padding:10px 18px;font-size:13px">Stratégie PDF</a></div></nav>
+<header class="hero"><div class="w">
+ <div class="k">Réseaux sociaux · Proposition</div>
+ <h1>Le cabinet,<br><i>sur les réseaux.</i></h1>
+ <p class="lead">Vidéos explicatives et publications pour Facebook, Instagram et TikTok, aux couleurs du Centre des Varices. Tout le contenu reprend les informations du site et sera validé par la doctoresse avant publication.</p>
+ <div style="display:flex;gap:12px;margin-top:30px;flex-wrap:wrap"><a class="btn b1" href="#videos">▶ Voir les vidéos</a><a class="btn b2" href="#strategie">La stratégie de lancement</a></div>
+</div>
+<svg class="ecg" viewBox="0 0 1200 90" preserveAspectRatio="none"><path d="M0 60 H200 l15 -10 l15 10 H300 l10 -20 l14 60 l16 -90 l12 50 H520 c15 0 25 -20 40 -20 s25 20 40 20 H800 l15 -10 l15 10 H900 l10 -20 l14 60 l16 -90 l12 50 H1200" fill="none" stroke="#6DC4AA" stroke-width="2"/></svg>
+</header>
+<section id="videos"><div class="w">
+ <div class="k">Vidéos explicatives · Motion design</div>
+ <h2>Quatre vidéos <i>pour expliquer</i></h2>
+ <p class="sub">Format vertical pour TikTok, les Reels Instagram et Facebook. Voix off en français, sous-titres intégrés, fin sur la carte du cabinet.</p>
+ <div class="tabs" id="vtabs"><button class="on" data-p="tt">TikTok</button><button data-p="ig">Reels Instagram</button><button data-p="fb">Facebook</button></div>
+ <div class="vids" id="vids"></div>
+</div></section>
+<section id="posts" style="background:#fff"><div class="w">
+ <div class="k">Publications · Instagram &amp; Facebook</div>
+ <h2>Des visuels <i>clairs et sobres</i></h2>
+ <p class="sub">Un message par publication, l'identité du cabinet, le numéro WhatsApp. Cliquez sur un visuel pour le voir dans le fil.</p>
+ <div class="tabs" id="ptabs"><button class="on" data-p="ig">Instagram</button><button data-p="fb">Facebook</button></div>
+ <div class="feed"><div class="ph2"><div class="scr" id="feed"></div></div>
+  <div class="side2"><h3 id="pt"></h3><p id="pd"></p><div class="thumbs" id="thumbs"></div></div></div>
+</div></section>
+<section id="strategie" class="strat"><div class="w">
+ <div class="k">Stratégie de lancement</div>
+ <h2>Un plan clair, <i>mois après mois</i></h2>
+ <p class="sub">Création des pages, 12 publications par mois, une vidéo de présentation institutionnelle et un sponsoring local orienté WhatsApp. Le détail complet est dans le document PDF.</p>
+ <div class="cards">
+  <div class="card"><div class="n">5</div><b>Pages créées</b><p>Facebook, Instagram, TikTok, fiche Google et WhatsApp Business.</p></div>
+  <div class="card"><div class="n">12</div><b>Publications par mois</b><p>Dont 4 vidéos explicatives et 8 visuels, en français avec mots-clés en arabe.</p></div>
+  <div class="card"><div class="n">1</div><b>Vidéo institutionnelle</b><p>Tournée au cabinet, 60 à 90 secondes, formats horizontal et vertical.</p></div>
+  <div class="card"><div class="n">12</div><b>Mois de fil rouge</b><p>Un thème par mois, calé sur les journées mondiales de santé.</p></div>
+ </div>
+ <div class="dl"><a class="btn b1" href="strategie-centre-des-varices.pdf" download>⬇ Télécharger la stratégie (PDF)</a><a class="btn b2" href="strategie-centre-des-varices.pdf" target="_blank">Ouvrir dans le navigateur</a></div>
+</div></section>
+<footer><div class="w"><a href="/">← Retour au site du Centre des Varices</a><span>Proposition réalisée par <a href="https://webminds.dz" target="_blank">Webminds Digital Solutions</a></span></div></footer>
+<script>
+const V=[['video1','Les varices','Jambes lourdes ? Ce sont peut-être des varices.'],['video2','Écho-doppler','Un examen indolore, sans aiguille, réalisé sur place.'],['video3','ECG & MAPA','Votre cœur et votre tension, sous surveillance.'],['video4','La consultation','Comment se déroule votre consultation, en 3 étapes.']];
+const H='centredesvarices';
+const UI={tt:(t,c)=>`<div class="top">Suivis &nbsp; <b>Pour toi</b></div><div class="side"><span><i>♥</i>J'aime</span><span><i>💬</i>Avis</span><span><i>↗</i>Partager</span></div><div class="cap"><b>@${H}</b></div>`,
+ig:(t,c)=>`<div class="top">Reels</div><div class="side"><span><i>♡</i></span><span><i>💬</i></span><span><i>➤</i></span></div><div class="cap"><b>${H} · Suivre</b></div>`,
+fb:(t,c)=>`<div class="top">Reels Facebook</div><div class="side"><span><i>👍</i>J'aime</span><span><i>💬</i></span><span><i>↗</i>Partager</span></div><div class="cap"><b>Centre des Varices · Suivre</b></div>`};
+let plat='tt';const vids=document.getElementById('vids');
+function drawV(){vids.innerHTML=V.map(([f,t,c],i)=>`<div><div class="ph"><div class="scr"><video src="${f}.mp4" poster="${f}.jpg" muted loop playsinline preload="metadata"></video><div class="ui">${UI[plat](t,c)}</div><button class="snd" data-i="${i}">🔊 Activer le son</button></div></div><div class="vt">${t}<span>${['26 s','29 s','32 s','40 s'][i]}</span></div></div>`).join('');
+ const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(e.isIntersecting)v.play().catch(()=>{});else v.pause()}),{threshold:.5});
+ vids.querySelectorAll('video').forEach(v=>io.observe(v));
+ vids.querySelectorAll('.snd').forEach(b=>b.onclick=()=>{vids.querySelectorAll('video').forEach(o=>o.muted=true);vids.querySelectorAll('.snd').forEach(o=>o.style.display='');const v=b.parentNode.querySelector('video');v.muted=false;v.currentTime=0;v.play();b.style.display='none'});}
+document.querySelectorAll('#vtabs button').forEach(b=>b.onclick=()=>{plat=b.dataset.p;document.querySelectorAll('#vtabs button').forEach(x=>x.classList.toggle('on',x===b));drawV()});drawV();
+const P=[['Des jambes légères','Le visuel d\'appel : varices et jambes lourdes, examen et écho-doppler sur place.','Jambes lourdes, gonflées en fin de journée ? Un examen clinique et un écho-doppler réalisés sur place permettent un diagnostic précis. 📍 Dely Ibrahim, à côté du CNMS · 📲 RDV WhatsApp 0560 76 43 16','#varices #echodoppler #DelyIbrahim #Alger'],
+['Écho-doppler vasculaire','L\'examen phare du cabinet, expliqué simplement.','L\'écho-doppler vasculaire : un examen indolore, sans aiguille, pour voir vos artères, vos veines et la circulation du sang en temps réel. Réalisé sur place, au cabinet.','#echodoppler #varices #DelyIbrahim'],
+['ECG & MAPA','Le cœur et la tension : deux examens réalisés au cabinet.','ECG : l\'activité électrique du cœur en quelques minutes. MAPA : votre tension mesurée automatiquement pendant 24 heures. Deux examens réalisés au cabinet.','#hypertension #ECG #MAPA #Alger'],
+['Le cabinet','Un cabinet neuf, calme et lumineux.','Un espace neuf, calme et lumineux, pensé pour votre confort et équipé pour des examens complets sur place. 📍 Dely Ibrahim, à côté du CNMS.','#DelyIbrahim #Alger #cabinetmedical'],
+['Médecine interne','Les pathologies prises en charge, en français et en arabe.','Maladies vasculaires, varices, ulcère de jambe veineux, maladies auto-immunes, diabète, hypertension, thyroïde : un suivi complet en médecine interne. مركز الدوالي','#medecineinterne #diabete #hypertension'],
+['Infos pratiques','Adresse, horaires et WhatsApp, avec le repère du cabinet.','28 rue Mohamed Bettouche Ali, Clair Val, Dely Ibrahim (à côté du CNMS). Samedi – jeudi, 08h30 – 16h30. Rendez-vous par WhatsApp : 0560 76 43 16.','#DelyIbrahim #Alger #varices']];
+let pn='ig',pi=0;const feed=document.getElementById('feed');
+function drawP(){const p=P[pi],ig=pn==='ig';
+ feed.innerHTML=(ig?'<div class="app"><span class="lg">Instagram</span><span>♡ &nbsp;✉</span></div>':'<div class="app fb"><span class="lg">facebook</span><span>🔍 &nbsp;✉</span></div>')+
+ `<div class="pp"><div class="av"><img src="logo.svg" alt=""></div><div><b>${ig?H:'Centre des Varices · مركز الدوالي'}</b><small>${ig?'Dely Ibrahim, Alger':'Sponsorisé · 🌐'}</small></div></div>`+
+ (ig?'':`<div class="capt">${p[2]} <span class="hs">${p[3]}</span></div>`)+
+ `<div class="pimg"><img src="post${pi+1}.jpg" alt="${p[0]}"></div>`+
+ (ig?`<div class="acts">♡ 💬 ➤<span style="margin-left:auto">🔖</span></div><div class="likes">J'aime</div><div class="capt"><b>${H}</b> ${p[2]} <span class="hs">${p[3]}</span></div>`:`<div class="fbacts"><span>👍 J'aime</span><span>💬 Commenter</span><span>📲 WhatsApp</span></div>`);
+ document.getElementById('pt').textContent=p[0];document.getElementById('pd').textContent=p[1];
+ document.querySelectorAll('#thumbs button').forEach((b,k)=>b.classList.toggle('on',k===pi));}
+document.getElementById('thumbs').innerHTML=P.map((p,i)=>`<button aria-label="${p[0]}"><img src="post${i+1}t.jpg" alt=""></button>`).join('');
+document.querySelectorAll('#thumbs button').forEach((b,i)=>b.onclick=()=>{pi=i;drawP()});
+document.querySelectorAll('#ptabs button').forEach(b=>b.onclick=()=>{pn=b.dataset.p;document.querySelectorAll('#ptabs button').forEach(x=>x.classList.toggle('on',x===b));drawP()});drawP();
+</script></body></html>
