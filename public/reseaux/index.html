@@ -79,15 +79,7 @@ h2{font-family:Fr;font-weight:400;font-size:clamp(34px,5vw,54px);line-height:1.0
 .lb .nv{position:absolute;top:50%;transform:translateY(-50%);width:50px;height:50px;border-radius:50%;border:0;background:rgba(244,249,246,.9);font-size:28px;cursor:pointer}
 .lb .pv{left:14px}.lb .nx{right:14px}
 .lb .lc{position:absolute;bottom:18px;left:0;right:0;text-align:center;color:#BBEAD8;font-family:Fr;font-size:20px}
-.mw{position:fixed;inset:0;z-index:60;background:rgba(8,22,18,.82);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:18px}
-.mw.on{display:flex}
-.mwb{position:relative;width:min(92vw,400px);background:#0F2E26;border-radius:28px;padding:18px 18px 20px;box-shadow:0 40px 90px rgba(0,0,0,.5);text-align:center;color:#F4F9F6;animation:pop .45s cubic-bezier(.2,1.4,.4,1)}
 @keyframes pop{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}
-.mwb h3{font-family:Fr;font-weight:400;font-size:24px;margin:4px 0 2px}.mwb p{font-family:Tj;color:#9DD9C4;font-size:16px;margin-bottom:12px}
-.mwb video{width:100%;aspect-ratio:9/16;max-height:62vh;border-radius:18px;background:#000;object-fit:cover;display:block}
-.mwb .x{position:absolute;top:-14px;right:-10px;width:42px;height:42px;border-radius:50%;border:0;background:#F4F9F6;color:#0F2E26;font-size:16px;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.3)}
-.fab{position:fixed;right:18px;bottom:18px;z-index:40;display:flex;align-items:center;gap:10px;background:#F4F9F6;color:#0F2E26;border:0;border-radius:999px;padding:12px 18px 12px 14px;font:800 14px Mn;box-shadow:0 14px 34px rgba(15,46,38,.35);cursor:pointer}
-.fab i{font-style:normal;font-size:20px;animation:beat 1.6s infinite}@keyframes beat{0%,100%{transform:scale(1)}15%{transform:scale(1.25)}30%{transform:scale(1)}}
 .strat{background:var(--d);color:var(--l3)}
 .strat .k{color:var(--l1)}.strat h2 i{color:var(--l1)}.strat .sub{color:#BBEAD8}
 .cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:40px}
@@ -111,7 +103,7 @@ footer{padding:34px 0;font-size:13px;color:#4c6a61;border-top:1px solid var(--l2
  <div class="k">Réseaux sociaux · Proposition</div>
  <h1>Le cabinet,<br><i>sur les réseaux.</i></h1>
  <p class="lead">Vidéos explicatives et publications pour Facebook, Instagram et TikTok, aux couleurs du Centre des Varices. Tout le contenu reprend les informations du site et sera validé par la doctoresse avant publication.</p>
- <div style="display:flex;gap:12px;margin-top:30px;flex-wrap:wrap"><a class="btn b1" href="#" data-msg>💌 Voir le message de Walid</a><a class="btn b2" href="#videos">▶ Les vidéos</a><a class="btn b2" href="#posts">Voir les maquettes</a><a class="btn b2" href="#strategie">La stratégie</a></div>
+ <div style="display:flex;gap:12px;margin-top:30px;flex-wrap:wrap"><a class="btn b2" href="#videos">▶ Les vidéos</a><a class="btn b2" href="#posts">Voir les maquettes</a><a class="btn b2" href="#strategie">La stratégie</a></div>
 </div>
  <div class="hv"><span class="tag">Nouveau · Vidéo de présentation</span><div class="ph"><div class="scr"><video id="pv" poster="presentation.jpg" muted autoplay loop playsinline webkit-playsinline preload="auto" disablepictureinpicture><source src="presentation.mp4?v=1" type="video/mp4"></video><button class="snd2" id="pvs">🔊 Regarder avec le son</button></div></div><div class="vt">Présentation du cabinet · 1 min 27</div></div>
 </div></div>
@@ -178,18 +170,6 @@ lb.querySelector('.x').onclick=()=>lb.classList.remove('on');lb.onclick=e=>{if(e
 lb.querySelector('.pv').onclick=()=>openLb(li-1);lb.querySelector('.nx').onclick=()=>openLb(li+1);
 document.addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==='Escape')lb.classList.remove('on');if(e.key==='ArrowLeft')openLb(li-1);if(e.key==='ArrowRight')openLb(li+1)});
 drawP();
-</script><button class="fab" id="fab"><i>💌</i>Message de Walid</button>
-<div class="mw" id="mw"><div class="mwb"><button class="x" id="mwx" aria-label="Fermer">✕</button>
-<h3>Un message pour toi, Nassima</h3><p>بنت خالتي العزيزة</p>
-<video id="mv" poster="message.jpg" controls playsinline webkit-playsinline preload="metadata"><source src="message.mp4" type="video/mp4"></video></div></div>
-<script>
-(function(){const mw=document.getElementById('mw'),mv=document.getElementById('mv');
-function open(){mw.classList.add('on');document.querySelectorAll('#vids video').forEach(v=>{v.muted=true});mv.currentTime=0;mv.play().catch(()=>{})}
-function close(){mw.classList.remove('on');mv.pause()}
-document.getElementById('fab').onclick=open;document.getElementById('mwx').onclick=close;mw.onclick=e=>{if(e.target===mw)close()};
-document.querySelectorAll('[data-msg]').forEach(b=>b.onclick=e=>{e.preventDefault();open()});
-let seen=false;try{seen=sessionStorage.getItem('msgW')==='1';sessionStorage.setItem('msgW','1')}catch(e){}
-if(!seen)setTimeout(open,900);})();
 </script>
 <script>(function(){const v=document.getElementById('pv'),b=document.getElementById('pvs');
 b.onclick=e=>{e.stopPropagation();v.muted=false;v.currentTime=0;v.loop=false;v.play();b.style.display='none'};
